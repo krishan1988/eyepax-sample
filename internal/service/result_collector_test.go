@@ -39,6 +39,10 @@ func TestAggregateResult(t *testing.T) {
 			if !ok {
 				t.Errorf("Expected vale for window %v is incorrect. got: %v, expected: %v", result.WindowStart, result.TotalSum, val)
 			}
+
+			if val != result.TotalSum {
+				t.Errorf("Expected vale for window %v is incorrect. got: %v, expected: %v", result.WindowStart, result.TotalSum, val)
+			}
 		}
 	}
 }
